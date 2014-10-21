@@ -12,7 +12,7 @@ namespace tgdbLib
 {
     public class RequestHelper
     {
-        private static string _baseUrl = " http://thegamesdb.net/api/";
+        private static string _baseUrl = "http://thegamesdb.net/api/";
         public RequestHelper() { }
 
         public Game GetGame(int Id)

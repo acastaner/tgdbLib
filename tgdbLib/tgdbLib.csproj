@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Data.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Genre.cs" />
+    <Compile Include="Image\Boxart.cs" />
     <Compile Include="Image\Fanart.cs" />
     <Compile Include="Image\Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
