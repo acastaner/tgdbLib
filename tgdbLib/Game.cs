@@ -38,6 +38,8 @@ namespace tgdbLib
         [XmlArray("Images")]
         [XmlArrayItem("fanart", Type = typeof(Fanart))]
         [XmlArrayItem("boxart", Type = typeof(Boxart))]
+        [XmlArrayItem("clearlogo", Type = typeof(ClearLogo))]
+        [XmlArrayItem("banner", Type = typeof(Banner))]
         public List<Image.Image> Images { get; set; }
 
         public Game()

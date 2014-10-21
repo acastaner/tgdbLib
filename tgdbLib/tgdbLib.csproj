@@ -42,6 +42,8 @@
     <Compile Include="Data.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Genre.cs" />
+    <Compile Include="Image\ClearLogo.cs" />
+    <Compile Include="Image\Banner.cs" />
     <Compile Include="Image\Boxart.cs" />
     <Compile Include="Image\Fanart.cs" />
     <Compile Include="Image\Image.cs" />
