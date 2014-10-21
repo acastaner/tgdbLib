@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using tgdbLib.Image;
 
 namespace tgdbLib
 {
@@ -18,9 +19,9 @@ namespace tgdbLib
         public Game GetGame(int Id)
         {
             XmlDocument response = MakeRequest(_baseUrl + "GetGame.php?id=" + Id);
-            XmlSerializer serializer = new XmlSerializer(typeof(Data));
-            XmlReader reader = new XmlNodeReader(response);
 
+            XmlSerializer serializer = new XmlSerializer(typeof(Data));
+            XmlReader reader = new XmlNodeReader(response);        
             Data data = (Data)serializer.Deserialize(reader);
 
             return data.Game;

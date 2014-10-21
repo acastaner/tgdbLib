@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using tgdbLib.Image;
 
 namespace tgdbLib
 {
@@ -34,6 +35,9 @@ namespace tgdbLib
         public string Publisher { get; set; }
         public string Developer { get; set; }
         public float Rating { get; set; }
+        [XmlArray("Images")]
+        [XmlArrayItem("fanart", Type = typeof(Fanart))]
+        [XmlArrayItem("boxart", Type = typeof(Boxart))]
         public List<Image.Image> Images { get; set; }
 
         public Game()

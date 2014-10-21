@@ -7,11 +7,11 @@ using System.Xml.Serialization;
 
 namespace tgdbLib.Image
 {
-    public class Fanart : Image
+    public class Boxart : Image
     {
-        [XmlElement("original")]
+        [XmlText]
         public string Url { get; set; }
-        [XmlElement("thumb")]
+        [XmlAttribute("thumb")]
         public string Thumb { get; set; }
     }
 }
