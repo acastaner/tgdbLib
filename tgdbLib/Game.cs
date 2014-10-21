@@ -26,6 +26,7 @@ namespace tgdbLib
         }
         public string Overview { get; set; }
         public string ESRB { get; set; }
+        [XmlElement("Genres")]
         public List<Genre> Genres { get; set; }
         public string Players { get; set; }
         public bool Coop { get; set; }
