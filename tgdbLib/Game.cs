@@ -49,16 +49,46 @@ namespace tgdbLib
             this.Images = new List<Image.Image>();
         }
 
-        public static Game Get(int Id)
+        /// <summary>
+        /// Returns the game with the specified Id.
+        /// </summary>
+        /// <param name="id">The id of the game to return.</param>
+        /// <returns></returns>
+        public static Game Get(int id)
         {
             RequestHelper helper = new RequestHelper();
-            XmlDocument response = helper.MakeRequest("GetGame.php?id=" + Id);
+            XmlDocument response = helper.MakeRequest("GetGame.php?id=" + id);
 
             XmlSerializer serializer = new XmlSerializer(typeof(GameData));
             XmlReader reader = new XmlNodeReader(response);        
             GameData data = (GameData)serializer.Deserialize(reader);
 
             return data.Game;
+        }
+        /// <summary>
+        /// Returns a list of games matching the specified name.
+        /// </summary>
+        /// <param name="name">Name of the game(s) to return.</param>
+        /// <returns></returns>
+        public static List<Game> Get(string name)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Returns a list of available artwork types and locations specific to the requested game id in the database.
+        /// </summary>
+        /// <param name="id">The numeric ID of the game in the database that you like to fetch artwork details for. </param>
+        /// <returns></returns>
+        public static List<tgdbLib.Image.Image> GetArt(int id)
+        {
+            RequestHelper helper = new RequestHelper();
+            XmlDocument response = helper.MakeRequest("GetArt.php?id=" + id);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(ImagesData));
+            XmlReader reader = new XmlNodeReader(response);
+            ImagesData data = (ImagesData)serializer.Deserialize(reader);
+
+            return data.Images;
         }
     }
 }
