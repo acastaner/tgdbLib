@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace tgdbLib
 {
     [XmlRoot("Data")]
-    public class Data
+    public class GameData
     {
         [XmlElement("baseImgUrl")]
         public string BaseImgUrl { get; set; }

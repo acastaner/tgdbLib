@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 using tgdbLib.Image;
 
@@ -46,6 +47,18 @@ namespace tgdbLib
         {
             this.Genres = new List<Genre>();
             this.Images = new List<Image.Image>();
+        }
+
+        public static Game Get(int Id)
+        {
+            RequestHelper helper = new RequestHelper();
+            XmlDocument response = helper.MakeRequest("GetGame.php?id=" + Id);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(GameData));
+            XmlReader reader = new XmlNodeReader(response);        
+            GameData data = (GameData)serializer.Deserialize(reader);
+
+            return data.Game;
         }
     }
 }
