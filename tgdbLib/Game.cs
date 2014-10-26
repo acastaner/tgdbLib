@@ -72,6 +72,8 @@ namespace tgdbLib
         /// <returns></returns>
         public static List<Game> Get(string name)
         {
+            // TODO: This returns a non-nested list, need to investigate how to serialize that
+            // ie: GetGame.php?name=XCOM 
             throw new NotImplementedException();
         }
         /// <summary>

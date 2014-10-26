@@ -28,5 +28,10 @@ namespace tgdbLib
             PlatformsData data = helper.Deserialize<PlatformsData>(response);
             return data.Platforms;
         }
+        
+        public PlatformDetail GetDetails()
+        {
+            return PlatformDetail.Get(this.Id);
+        }
     }
 }

@@ -46,8 +46,12 @@
     <Compile Include="Image\ClearLogo.cs" />
     <Compile Include="Image\Banner.cs" />
     <Compile Include="Image\Boxart.cs" />
+    <Compile Include="Image\ControllerArt.cs" />
+    <Compile Include="Image\ConsoleArt.cs" />
     <Compile Include="Image\Fanart.cs" />
     <Compile Include="Image\Image.cs" />
+    <Compile Include="PlatformDetail.cs" />
+    <Compile Include="PlatformData.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="PlatformsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
